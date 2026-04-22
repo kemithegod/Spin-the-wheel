@@ -3,7 +3,7 @@ const { Client, GatewayIntentBits, REST, Routes, SlashCommandBuilder, EmbedBuild
 const TOKEN = process.env.DISCORD_TOKEN;
 const CLIENT_ID = process.env.CLIENT_ID;
 const WHEEL_URL = 'https://kemithegod.github.io/spin-wheel/';
-const SPIN_GIF  = 'https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif';
+const SPIN_GIF = 'https://media.giphy.com/media/3o7TKDMqzBnbFmoCCY/giphy.gif';
 
 const segments = [
   { value: 66,  copies: ["devil number. fitting.", "$66 and you're already sweating.", "chaos energy. pay up."] },
