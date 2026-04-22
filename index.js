@@ -3,7 +3,14 @@ const { Client, GatewayIntentBits, REST, Routes, SlashCommandBuilder, EmbedBuild
 const TOKEN = process.env.DISCORD_TOKEN;
 const CLIENT_ID = process.env.CLIENT_ID;
 const WHEEL_URL = 'https://kemithegod.github.io/spin-wheel/';
-const SPIN_GIF = 'https://media.giphy.com/media/3o7TKDMqzBnbFmoCCY/giphy.gif';
+const SPIN_GIFS = [
+  'https://media.giphy.com/media/PIn7AxoH9hFYuieHR5/giphy.gif',
+  'https://media4.giphy.com/media/1DEJwfwdknKZq/giphy.gif',
+  'https://media.giphy.com/media/3o7TKDMqzBnbFmoCCY/giphy.gif',
+  'https://media.giphy.com/media/xT5LMHHyC60Mbyhrm8/giphy.gif',
+  'https://media.giphy.com/media/FrnpqArQZtti8/giphy.gif',
+  'https://media.giphy.com/media/xT5LMGcINLsZgqnmes/giphy.gif',
+];
 
 const segments = [
   { value: 66,  copies: ["devil number. fitting.", "$66 and you're already sweating.", "chaos energy. pay up."] },
@@ -43,7 +50,7 @@ client.on('interactionCreate', async interaction => {
       new EmbedBuilder()
         .setTitle("🎡 The wheel is spinning...")
         .setDescription("She's deciding your fate. Wait.")
-        .setImage(SPIN_GIF)
+        .setImage(SPIN_GIFS[Math.floor(Math.random() * SPIN_GIFS.length)])
         .setColor(0x2b0a3d)
     ]
   });
